@@ -1,0 +1,311 @@
+<html>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ <style>
+ body, html{
+	overflow-x: hidden;
+}
+    .logo{
+	 height: auto;
+	 left: 0px;
+	 width: 100px;
+   }
+
+ 
+   .navbar {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 15px 17px;
+
+   }
+
+   .nav-links{
+	display: flex;
+	align-items: center;
+
+   }
+
+   .nav-links a{
+	font-size: 1.15rem;
+	color: black;
+	text-decoration: none;
+	margin: 0 25px;
+	padding: 5px 20px;
+	border: #fff;
+	border-radius: 15px;
+	font-weight: 700;
+   }
+
+   .icons{
+	font-size: 2.8rem;
+	color: ghostwhite;
+	cursor: pointer;
+   }
+
+   .nav-links a:hover{
+	transition: 0.25s;
+	background: black;
+	color: whitesmoke;
+   }
+   
+   body{
+   height: auto;
+   justify-content: center;
+   align-items: center;
+   background: url('background.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   
+  }
+  
+  section{
+   margin: 50px 100px;
+  }
+  
+  .wrapper{
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .container{
+    height: 480px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: start;
+  }
+  
+  .card{
+    width: 70px;
+	border-radius: .75rem;
+	background-size: cover;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 2rem;
+	margin: 0 10px;
+	display: flex;
+	align-items: flex-end;
+	transition: .6s cubic-bezier(.28,-0.03,0,.99);
+	box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+  }
+  
+  .card > .row{
+    color: white;
+	display: flex;
+	flex-wrap: nowrap;
+  }
+  
+  .card > .row > .icon{
+	color: seashell;
+	border-radius: 50%;
+	width: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 15px;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+  }
+  
+  .card > .row > .description{
+    display: flex;
+	justify-content: center;
+	flex-direction: column;
+	overflow: hidden;
+	height: 200px;
+	width: 520px;
+	opacity: 0;
+	transform: translateY(30px);
+	transition-delay: .3s;
+	transition: all .3s ease;
+  }
+  
+  .description p {
+    color: yellow;
+	padding-top: 5px;
+  }
+  
+  .description h4{
+    text-transform: uppercase;
+	color: black;
+	backdrop-filter: blur(20px);
+	border-radius: 20px;
+  }
+  
+  
+  input{
+   display: none;
+  }
+  
+  input:checked + label{
+   width: 600px;
+  }
+  
+  input:checked + label .description{
+   opacity: 1 !important;
+   transform: translateY(0) !important;
+  }
+  
+  .card[for="c1"]{
+   background-image: url(entertainment_1.jpg);
+  }
+  
+  .card[for="c2"]{
+   background-image: url(entertainment_2.jpg);
+  }
+  
+  .card[for="c3"]{
+   background-image: url(entertainment_3.jpg);
+  }
+  
+  footer{
+	background-color: #111;
+}
+
+.footerContainer{
+	width: 100%;
+	padding: 70px 30px 20px;
+}
+
+.socialIcons{
+	display: flex;
+	justify-content: center;
+}
+
+.socialIcons a{
+	text-decoration: none;
+	padding: 10px;
+	background-color: white;
+	margin: 10px;
+	border-radius: 50%;
+}
+
+.socialIcons a i{
+	font-size: 2em;
+	color: #111;
+	opacity: 0.9;
+}
+
+.socialIcons a:hover{
+	background-color: #111;
+	transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+	color: white;
+	transition: 0.5s;
+}
+
+.footerBottom{
+	background-color: black;
+	padding: 20px;
+	text-align: center;
+}
+
+.footerBottom p{
+	color: white;
+}
+
+.designer{
+	opacity: 0.7;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	margin: 0px 5px;
+}
+
+  
+ </style>
+ 
+   
+   <nav class="navbar">
+   <img src="logo.png" class="logo">
+	<ul class="nav-links">
+	 <a href="index.html">Home</a>
+	 <a href="entertainment.html">Events</a>
+	 <a href="hotels.html">Hotels</a>
+	 <a href="competition.html">Competition</a>
+	 <a href="">About Us</a>
+	</ul>
+  </nav>
+  <body>
+   <section class=slides>
+   <div class="wrapper">
+    <div class="container">
+	  <input type="radio" name="slide" id="c1" checked>
+	  <label for="c1" class="card">
+	   <div class="row">
+	    <div class="icon">1</div>
+		<div class="description">
+		 <h4>Arc de Triomphe</h4>
+		 <p>The Arc de Triomphe is one of the most iconic monuments in Paris, France. It stands at the western end of the Champs-Élysées, one of the city's most famous avenues, and honors those who fought and died for France in the French Revolutionary and Napoleonic Wars.</p>
+		</div>
+	   </div>
+	  </label>
+	  
+	  <input type="radio" name="slide" id="c2" >
+	  <label for="c2" class="card">
+	   <div class="row">
+	    <div class="icon">2</div>
+		<div class="description">
+		 <h4>Louvre Museum</h4>
+		 <p>The Louvre Museum, located in Paris, France, is one of the world's largest and most famous art museums. Originally a medieval fortress and royal palace, it was transformed into a public museum during the French Revolution in the late 18th century. Today, the Louvre is a historic monument and a central landmark of Paris, attracting millions of visitors each year.</p>
+		</div>
+	   </div>
+	  </label>
+	  
+	  <input type="radio" name="slide" id="c3" >
+	  <label for="c3" class="card">
+	   <div class="row">
+	    <div class="icon">3</div>
+		<div class="description">
+		 <h4>La Tour Eiffel</h4>
+		 <p>La Tour Eiffel, or the Eiffel Tower, is one of the most iconic landmarks in the world and a symbol of both Paris and France. Designed by Gustave Eiffel and his team of engineers, it was built for the 1889 Exposition Universelle (World's Fair) to commemorate the 100th anniversary of the French Revolution.</p>
+		</div>
+	   </div>
+	  </label>
+	  
+	  
+	</div>
+   </div>
+  </section>
+  
+  <section>
+    <table style="border-spacing: 20px; border-radius:5%" bgcolor= "aliceblue">
+	 <tr>
+	  <td><video src ="C:\Users\Baron\Desktop\Website Design & Development\Assignment\Arc de Triomphe - Paris, France _ Place Charles de Gaulle Etoile.mp4" width="450" height="300" controls></video></td>
+	  <td><p style="font-size:30">Arc de Triomphe</p> The Arc de Triomphe is one of the most iconic monuments in Paris, France. It stands at the western end of the Champs-Élysées, one of the city's most famous avenues, and honors those who fought and died for France in the French Revolutionary and Napoleonic Wars.Commissioned by Napoleon Bonaparte in 1806 after his victory at Austerlitz, the Arc de Triomphe was designed by architect Jean Chalgrin and completed in 1836, long after Napoleon's reign. The monument stands 50 meters (164 feet) tall, 45 meters (148 feet) wide, and 22 meters (72 feet) deep. Its design is heavily influenced by ancient Roman triumphal arches, with intricate reliefs and sculptures depicting various scenes from French history and military victories.At the base of the arch lies the Tomb of the Unknown Soldier from World War I, commemorating the countless soldiers who lost their lives in the conflict. The Tomb is marked by an eternal flame, which is rekindled every evening at 6:30 PM.Visitors can climb to the top of the Arc de Triomphe for a panoramic view of Paris, including the Eiffel Tower, the Louvre, and the sprawling cityscape. It remains a symbol of France's military history and national pride, attracting millions of tourists each year.</td>
+	 </tr>
+	 
+	 <tr>
+	  <td><video src="C:\Users\Baron\Desktop\Website Design & Development\Assignment\Musée du Louvre, Palace of Arts __ Cinematic Video __ iPhoneX.mp4" width="450" height="300" controls></video></td>
+	  <td><p style="font-size:30">Louvre Museum</p>The Louvre Museum, located in Paris, France, is one of the world's largest and most famous art museums. Originally a medieval fortress and royal palace, it was transformed into a public museum during the French Revolution in the late 18th century. Today, the Louvre is a historic monument and a central landmark of Paris, attracting millions of visitors each year.The museum houses an extensive and diverse collection of art and artifacts spanning thousands of years, from ancient civilizations to the 19th century. Some of its most famous works include the Mona Lisa by Leonardo da Vinci, the Venus de Milo, and the Winged Victory of Samothrace. The Louvre's collection encompasses various mediums, including paintings, sculptures, decorative arts, and archaeological artifacts, representing cultures from around the world.In addition to its permanent collection, the Louvre also hosts temporary exhibitions, educational programs, and cultural events. The museum's iconic glass pyramid entrance, designed by architect I.M. Pei, is a modern addition that has become synonymous with the institution.Overall, the Louvre Museum is a symbol of art, history, and cultural heritage, serving as a testament to human creativity and achievement throughout the ages. It continues to inspire and captivate visitors from around the globe with its rich and diverse collection.</td>
+	 </tr>
+     
+	 <tr>
+	  <td><video src="C:\Users\Baron\Desktop\Website Design & Development\Assignment\Paris_ The last drone aerials.mp4" width="450" height="300" controls ></video></td>
+	  <td><p style="font-size:30">La Tour Eiffel</p>La Tour Eiffel, or the Eiffel Tower, is one of the most iconic landmarks in the world and a symbol of both Paris and France. Designed by Gustave Eiffel and his team of engineers, it was built for the 1889 Exposition Universelle (World's Fair) to commemorate the 100th anniversary of the French Revolution.Standing at a height of 324 meters (1,063 feet), the Eiffel Tower was the tallest man-made structure in the world until the completion of the Chrysler Building in New York City in 1930. It is constructed from wrought iron, which gives it a distinctive lattice-like appearance.The tower consists of three levels that are open to the public. Visitors can ascend to the first and second levels by either stairs or elevators, while the third level is accessible only by elevator. Each level offers breathtaking panoramic views of Paris and its landmarks, including the River Seine, Notre-Dame Cathedral, and the Arc de Triomphe.Beyond its architectural significance, the Eiffel Tower has become a global cultural icon, attracting millions of tourists each year. It has featured in countless films, paintings, photographs, and other forms of art, making it one of the most recognizable structures in the world. Additionally, it serves as a symbol of innovation, engineering prowess, and the enduring spirit of France.</td>
+	 </tr>
+	</table>
+   
+  </section>
+  
+  <footer>
+	  <div class="footerContainer">
+	    <div class="socialIcons">
+		  <a href="https://www.facebook.com/home.php"><i class='bx bxl-meta'></i></a>
+		  <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+		  <a href="https://www.linkedin.com/feed/"><i class='bx bxl-linkedin'></i></a>
+		  <a href="https://www.youtube.com/"><i class='bx bxl-youtube'></i></i></a>
+		</div>
+	  </div>
+	  	<div class="footerBottom">
+		  <p>Copyright &copy;2024; Designed by <span class="designer">Seeburrun Shivanand</p>
+		</div>
+	</footer>
+  </body>
+</html>
